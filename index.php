@@ -15,25 +15,20 @@ if (isset($_POST['task'])) {
   if ($_POST['task'] == 'Sign In') {
     // Redirect user to home page if already logged in
     if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) {
-      header("location: home.php");
+      header("location: home/home.php");
       exit;
     }
 
     // Process the login form
     if($_SERVER["REQUEST_METHOD"] == "POST") {
-      // If user hasn't entered username
-      if(empty(trim($_POST["username"]))){
-        $usernameErrMsg = "Please enter username.";
-      } else{
+      // Check that user has entered an email
+      if(!empty(trim($_POST["username"]))) {
         $username = trim($_POST["username"]);
       }
-      // If user hasn't entered password
-      if(empty(trim($_POST["password"]))){
-        $passwordErrMsg = "Please enter your password.";
-      } else{
+      // Check that user has entered a password
+      if(!empty(trim($_POST["password"]))) {
         $password = trim($_POST["password"]);
       }
-
       // Validate username & password
       if(empty($usernameErrMsg) && empty($passwordErrMsg)) {
         $query = "SELECT id, email, password FROM members WHERE email = ?";
@@ -56,7 +51,7 @@ if (isset($_POST['task'])) {
                   $_SESSION["id"] = $id;
                   $_SESSION["username"] = $username;
                   // Redirect user to home page
-                  header("location: home.php");
+                  header("location: home/home.php");
                 } else {
                     $passwordErrMsg = "Invalid password.";
                 }
@@ -65,7 +60,7 @@ if (isset($_POST['task'])) {
                 $usernameErMsg = "Username does not exist.";
             }
           } else {
-            echo "ERROR: SQL statement did not execute correctly.";
+            echo "We could not log you in. Please try again later.";
           }
         mysqli_stmt_close($stmt);
         }
@@ -78,10 +73,8 @@ if (isset($_POST['task'])) {
 
     // Processing form data when form is submitted
     if($_SERVER["REQUEST_METHOD"] == "POST") {
-      // If user hasn't entered username
-      if(empty(trim($_POST["username"]))) {
-          $usernameErrMsg = "Please enter your email.";
-      } else {
+      // Check if user has entered an email
+      if(!empty(trim($_POST["username"]))) {
         $query = "SELECT id FROM members WHERE email = ?";
         if($stmt = mysqli_prepare($link, $query)) {
           // Bind variables to the prepared statement as parameters
@@ -93,29 +86,26 @@ if (isset($_POST['task'])) {
             if(mysqli_stmt_num_rows($stmt) == 1) {
               $usernameErrMsg = "This email is already in use.";
             } else {
+                // Save email for pending database insert
                 $username = trim($_POST["username"]);
             }
           } else {
-              echo "ERROR: SQL statement did not execute correctly.";
+              echo "Something went wrong. Please try again later.";
           }
           mysqli_stmt_close($stmt);
         }
       }
 
-      // Validate password
-      if(empty(trim($_POST["password"]))) {
-        $passwordErrMsg = "Please enter a password.";
-      } else {
+      // Validate password, if user has entered one
+      if(!empty(trim($_POST["password"]))) {
         $password = trim($_POST["password"]);
       }
 
       // Validate confirm password
-      if(empty(trim($_POST["confirm_password"]))) {
-        $confirmPasswordErrMsg = "Please confirm password.";
-      } else {
+      if(!empty(trim($_POST["confirm_password"]))) {
         $confirmPassword = trim($_POST["confirm_password"]);
         if(empty($passwordErrMsg) && ($password != $confirmPassword)) {
-            $confirmPasswordErrMsg = "Password did not match.";
+            $confirmPasswordErrMsg = "Password do not match.";
         }
       }
 
@@ -130,10 +120,10 @@ if (isset($_POST['task'])) {
             $param_password = password_hash($password, PASSWORD_DEFAULT);
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)) {
-                // Redirect to login page
-                header("location: index.php");
+                // Redirect to home page
+                header("location: home/home.php");
             } else {
-                echo "ERROR: SQL statement did not execute correctly.";
+                echo "We could not make your account. Please try again later.";
             }
             mysqli_stmt_close($stmt);
         }
@@ -147,11 +137,11 @@ if (isset($_POST['task'])) {
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/fc0bcca8a3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="resources/css/index.css">
-    <title>Welcome to BeerCo!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://kit.fontawesome.com/fc0bcca8a3.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="resources/css/index.css">
+      <title>Welcome to BeerCo!</title>
   </head>
   <body>
     <!-- entire page container -->
@@ -168,10 +158,9 @@ if (isset($_POST['task'])) {
             <span class="help-block"><?php echo $usernameErrMsg;?></span>
           </div>
           <!-- password -->
-          <div class="form-group <?php echo (!empty($passwordErrMsg))?'has-error':'';?>">
+          <div class="form-group">
             <input type="password" name="password" placeholder="Password" class="form-control"
             value="<?php echo $password;?>">
-            <span class="help-block"><?php echo $passwordErrMsg;?></span>
           </div>
           <!-- confirm password -->
           <div class="form-group <?php echo (!empty($confirmPasswordErrMsg))?'has-error':'';?>">
@@ -181,7 +170,7 @@ if (isset($_POST['task'])) {
           </div>
           <!-- sign up button -->
           <div class="form-group">
-            <input type="submit" name="task" value="Sign Up" class="btn btn-primary">
+            <button type="submit" name="task" value="Sign Up">Sign Up</button>
           </div>
         </form>
       </div>
@@ -196,8 +185,9 @@ if (isset($_POST['task'])) {
             </div>
             <span>or use your Account</span>
           <!-- email -->
-          <div class="form-group <?php echo (!empty($usernameErrMsg))?'has-error':'';?>">
-            <input type="text" name="username"placeholder="Email" class="form-control"
+          <div
+           class="form-group <?php echo (!empty($usernameErrMsg))?'has-error':'';?>">
+            <input type="text" name="username" placeholder="Email" class="form-control"
             value="<?php echo $username;?>" required>
             <span class="help-block"><?php echo $usernameErrMsg; ?></span>
           </div>
@@ -208,7 +198,7 @@ if (isset($_POST['task'])) {
           </div>
           <!-- sign in button -->
           <div class="form-group">
-            <input type="submit" name="task" value="Sign In" class="btn btn-primary">
+            <button type="submit" name="task" value="Sign In">Sign In</button>
           </div>
         </form>
       </div>
@@ -230,6 +220,6 @@ if (isset($_POST['task'])) {
         </div>
       </div>
     </div>
-    <script src="resources/js/main.js"></script>
+    <script src="resources/js/index.js"></script>
   </body>
 </html>
