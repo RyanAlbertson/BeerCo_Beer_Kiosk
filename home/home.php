@@ -801,7 +801,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             </div>
         </div>
     </section>
-
     <section class="contact container" id="contact">
         <div class="contact__left">
             <h1>Join Our Mailing List</h1>

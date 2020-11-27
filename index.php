@@ -11,7 +11,7 @@ $confirmPasswordErrMsg = "";
 
 if (isset($_POST['task'])) {
 
-  // sign in functionality
+  // Sign in functionality
   if ($_POST['task'] == 'Sign In') {
     // Redirect user to home page if already logged in
     if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) {
@@ -68,7 +68,7 @@ if (isset($_POST['task'])) {
       mysqli_close($link);
     }
 
-  // sign up functionality
+  // Sign up functionality
   } else if ($_POST['task'] == 'Sign Up') {
 
     // Processing form data when form is submitted
