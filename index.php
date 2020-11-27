@@ -140,7 +140,7 @@ if (isset($_POST['task'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <script src="https://kit.fontawesome.com/fc0bcca8a3.js" crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="resources/css/index.css">
+      <link rel="stylesheet" href="resources/css/index.css?version=1">
       <title>Welcome to BeerCo!</title>
   </head>
   <body>

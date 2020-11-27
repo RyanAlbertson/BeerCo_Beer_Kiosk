@@ -46,8 +46,8 @@ a {
 
 button {
     border-radius: 20px;
-    border: 1px solid #FF4B2B;
-    background-color: #FF4B2B;
+    border: 1px solid #4a1667;
+    background-color: #4a1667;
     color: #FFFFFF;
     font-size: 12px;
     font-weight: bold;
@@ -160,9 +160,9 @@ input {
 }
 
 .overlay {
-    background: #FF416C;
-    background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-    background: linear-gradient(to right, #FF4B2B, #FF416C);
+    background:  #4a1667;
+    background: -webkit-linear-gradient(to right, #9566ad,  #4a1667);
+    background: linear-gradient(to right,  #9566ad, #4a1667);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
@@ -243,11 +243,11 @@ footer p {
 }
 
 footer i {
-    color: red;
+    color: #4a1667;
 }
 
 footer a {
-    color: #3c97bf;
+    color: #4a1667;
     text-decoration: none;
 }
 
