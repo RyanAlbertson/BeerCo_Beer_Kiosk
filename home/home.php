@@ -36,7 +36,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <nav class="nav">
         <div class="nav__center container">
             <div class="logo">
-                <h1><a href="#header" style="color: black;">Beer Co.</a></h1>
+                <h1><a href="#header" style="color: #4a1667;">Beer Co.</a></h1>
             </div>
 
             <div class="nav__menu">
@@ -47,11 +47,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     </li>
 
                     <li class="nav__item">
-                        <a href="#all" class="nav__link scroll-link">Shop</a>
+                        <a href="#all" class="nav__link scroll-link">Featured</a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#featured" class="nav__link scroll-link">Featured</a>
+                        <a href="#find" class="nav__link scroll-link">Find</a>
                     </li>
 
                     <li class="nav__item">
@@ -90,7 +90,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             </div>
 
             <div class="hero__right">
-               <img src="images/media/heineken-original-bottle.png" alt="" class="home__image">
+               <img src="../resources/images/media/heineken-original-bottle.png" alt="" class="home__image">
             </div>
         </div>
 
@@ -114,7 +114,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <div class="product__center">
                 <div class="product">
                     <div class="product__header">
-                        <img src="images/media/budlight.png" alt="">
+                        <img src="../resources/images/media/budlight.png" alt="">
                         <span class="flex__center">
                                 <svg>
                                     <use xlink:href="sprite.svg#icon-camera"></use>
@@ -154,7 +154,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
                 <div class="product">
                     <div class="product__header">
-                        <img src="images/media/coorslight.png" alt="">
+                        <img src="../resources/images/media/coorslight.png" alt="">
                         <span>
                                 <svg>
                                     <use xlink:href="sprite.svg#icon-camera"></use>
@@ -194,7 +194,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
                 <div class="product">
                     <div class="product__header">
-                        <img src="images/media/discount.png" alt="">
+                        <img src="../resources/images/media/discount.png" alt="">
                         <span>
                                 <svg>
                                     <use xlink:href="sprite.svg#icon-camera"></use>
@@ -234,7 +234,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
                 <div class="product">
                     <div class="product__header">
-                        <img src="images/media/heineken-beer.png" alt="">
+                        <img src="../resources/images/media/heineken-beer.png" alt="">
                         <span>
                                 <svg>
                                     <use xlink:href="sprite.svg#icon-camera"></use>
@@ -276,7 +276,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         </div>
     </section>
 
-    <!-- Category -->
+    <!-- 2 Featured Beers -->
     <section class="section category">
         <div class="category__center container">
             <div class="category__left">
@@ -285,7 +285,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     <h1>Miller</h1>
                     <a href="#all" class="button category__btn">View Products</a>
                 </div>
-                <img src="images/media/miller-genuine-draft.png" alt="">
+                <img src="../resources/images/media/miller-genuine-draft.png" alt="">
             </div>
 
             <div class="category__right">
@@ -294,22 +294,22 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     <h1>Save 50%</h1>
                     <a href="#all" class="button category__btn">View Products</a>
                 </div>
-                <img src="images/media/tecatelight.png" alt="">
+                <img src="../resources/images/media/tecatelight.png" alt="">
             </div>
         </div>
     </section>
 
-
+<!-- Featured Products -->
     <section class="section all__products" id="all">
         <div class="all__center container">
             <div class="title">
-                <h1>All Products</h1>
+                <h1>Featured Products</h1>
             </div>
 
             <div class="product__center">
                 <div class="product">
                     <div class="product__header">
-                        <img src="images/media/amstel.png" alt="">
+                        <img src="../resources/images/media/amstel.png" alt="">
                         <span>
                                 <svg>
                                     <use xlink:href="sprite.svg#icon-camera"></use>
@@ -349,7 +349,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
                 <div class="product">
                     <div class="product__header">
-                        <img src="images/media/budweiser-beer-bottle.png" alt="">
+                        <img src="../resources/images/media/budweiser-beer-bottle.png" alt="">
                         <span>
                                 <svg>
                                     <use xlink:href="sprite.svg#icon-camera"></use>
@@ -389,7 +389,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
                 <div class="product">
                     <div class="product__header">
-                        <img src="images/media/budlight.png" alt="">
+                        <img src="../resources/images/media/budlight.png" alt="">
                         <span>
                                 <svg>
                                     <use xlink:href="sprite.svg#icon-camera"></use>
@@ -429,7 +429,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
                 <div class="product">
                     <div class="product__header">
-                        <img src="images/media/heineken-beer.png" alt="">
+                        <img src="../resources/images/media/heineken-beer.png" alt="">
                         <span>
                                 <svg>
                                     <use xlink:href="sprite.svg#icon-camera"></use>
@@ -469,7 +469,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
                 <div class="product">
                     <div class="product__header">
-                        <img src="images/media/coorslight.png" alt="">
+                        <img src="../resources/images/media/coorslight.png" alt="">
                         <span>
                                 <svg>
                                     <use xlink:href="sprite.svg#icon-camera"></use>
@@ -509,7 +509,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
                 <div class="product">
                     <div class="product__header">
-                        <img src="images/media/amstel-torp.png" alt="">
+                        <img src="../resources/images/media/amstel-torp.png" alt="">
                         <span>
                                 <svg>
                                     <use xlink:href="sprite.svg#icon-camera"></use>
@@ -549,7 +549,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
                 <div class="product">
                     <div class="product__header">
-                        <img src="images/media/discount.png" alt="">
+                        <img src="../resources/images/media/discount.png" alt="">
                         <span>
                                 <svg>
                                     <use xlink:href="sprite.svg#icon-camera"></use>
@@ -589,7 +589,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
                 <div class="product">
                     <div class="product__header">
-                        <img src="images/media/busch%20beer.png" alt="">
+                        <img src="../resources/images/media/busch%20beer.png" alt="">
                         <span>
                                 <svg>
                                     <use xlink:href="sprite.svg#icon-camera"></use>
@@ -628,19 +628,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="section" id="featured">
-        <div class="new__center container">
-            <div class="title">
-                <h1>Featured Products</h1>
-            </div>
-
             <div class="product__center">
                 <div class="product">
                     <div class="product__header">
-                        <img src="images/media/WildLittleThing-can-240x860.png" alt="">
+                        <img src="../resources/images/media/WildLittleThing-can-240x860.png" alt="">
                         <span>
                                 <svg>
                                     <use xlink:href="sprite.svg#icon-camera"></use>
@@ -680,7 +671,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
                 <div class="product">
                     <div class="product__header">
-                        <img src="images/media/white-claw.png" alt="">
+                        <img src="../resources/images/media/white-claw.png" alt="">
                         <span>
                                 <svg>
                                     <use xlink:href="sprite.svg#icon-camera"></use>
@@ -720,7 +711,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
                 <div class="product">
                     <div class="product__header">
-                        <img src="images/media/12th-of-Never-Can.png" alt="">
+                        <img src="../resources/images/media/12th-of-Never-Can.png" alt="">
                         <span>
                                 <svg>
                                     <use xlink:href="sprite.svg#icon-camera"></use>
@@ -760,7 +751,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
                 <div class="product">
                     <div class="product__header">
-                        <img src="images/media/lagunitas.png" alt="">
+                        <img src="../resources/images/media/lagunitas.png" alt="">
                         <span>
                                 <svg>
                                     <use xlink:href="sprite.svg#icon-camera"></use>
@@ -798,6 +789,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Find Beers -->
+    <section id="find">
+        <div>
+            <div class="title">
+                <h1>Find Beers</h1>
             </div>
         </div>
     </section>
@@ -855,7 +855,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                 <use xlink:href="sprite.svg#icon-location"></use>
                             </svg>
                         </span>
-                    100 Beer street, 12345 NJ, USA
+                    100 Beer Street, NJ City, NJ 12345 USA
                 </div>
                 <div>
                         <span>
