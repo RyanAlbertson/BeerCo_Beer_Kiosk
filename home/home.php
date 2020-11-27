@@ -94,7 +94,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             </div>
         </div>
 
-        <a href="#all" class="go-down flex__center">
+        <a href="#new" class="go-down flex__center">
             <svg>
                 <use xlink:href="sprite.svg#icon-angle-down"></use>
             </svg>
@@ -103,7 +103,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </header>
 
 <!-- New Products -->
-
 <main>
     <section class="section new" id="new">
         <div class="new__center container">
@@ -397,7 +396,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                             </span>
                     </div>
                     <div class="product__footer">
-                        <h2>BudLight</h2>
+                        <h2>Bud Light Seltzer</h2>
                         <div class="rating">
                                 <span>
                                     <svg>
