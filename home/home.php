@@ -884,7 +884,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 </footer>
 
 
-<script src="app.js"></script>
+<script src="../resources/js/home.js"></script>
 </body>
 
 </html>
