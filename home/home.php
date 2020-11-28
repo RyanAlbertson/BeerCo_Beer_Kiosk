@@ -1,13 +1,14 @@
 <?php
 
-/* TODO:    - on home page, add section for filtering beers (no images).
-            - link DB info for each beer to individual beer pages.
-*/
-session_start();
 
+// TODO:    -Make featured beers clickable to individual products pages.
+//          -Add individual product page for each beer.
+
+
+session_start();
 // Send user to login page if they're not logged in
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: ".dirname(__FILE__, 2)."index.php");
+    header("location: ".dirname(__FILE__, 2)."../index.php");
     exit;
 }
 ?>
@@ -18,12 +19,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="../resources/css/home.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- StyleSheet -->
-    <link rel="stylesheet" href="../resources/css/home.css">
+    <!-- Find Beer Feature -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/css/bootstrap-slider.min.css" rel="stylesheet"/> -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
 
     <title>Beer Co.</title>
 </head>
@@ -626,8 +628,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="product__center">
                 <div class="product">
                     <div class="product__header">
                         <img src="../resources/images/media/WildLittleThing-can-240x860.png" alt="">
@@ -789,7 +789,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     </div>
                 </div>
             </div>
-            </div>
         </div>
     </section>
 
@@ -800,8 +799,71 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <div class="title">
                    <h1>Find Beers</h1>
                 </div>
+                <div class="container">
+                <?php
+                    include('Product.php');
+                    $product = new Product();
+                ?>
+                <div class="row">
+                    <div class="col-md-3">
+
+                        <div class="list-group">
+                            <h3>Brand</h3>
+                            <div class="brandSection">
+                                <?php
+                                    $brand = $product->getBrand();
+                                    foreach($brand as $brandDetails){
+                                ?>
+                                <div class="list-group-item checkbox">
+                                    <label><input type="checkbox" class="productDetail brand" value="<?php echo $brandDetails["brand"]; ?>" > <?php echo $brandDetails["brand"]; ?></label>
+                                </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+
+                        <div class="list-group">
+                            <h3>Brewer</h3>
+                            <?php
+                                $brewer = $product->getBrewer();
+                                foreach($brewer as $brewerDetails){
+                            ?>
+                            <div class="list-group-item checkbox">
+                                <label><input type="checkbox" class="productDetail brand" value="<?php echo $brewerDetails['brewer']; ?>" > <?php echo $brewerDetails['brewer']; ?></label>
+                            </div>
+                            <?php } ?>
+                        </div>
+
+                        <div class="list-group">
+                            <h3>Region</h3>
+                            <?php
+                                $region = $product->getRegion();
+                                foreach($region as $regionDetails){
+                            ?>
+                            <div class="list-group-item checkbox">
+                                <label><input type="checkbox" class="productDetail brand" value="<?php echo $regionDetails['region']; ?>" > <?php echo $regionDetails['region']; ?></label>
+                            </div>
+                            <?php } ?>
+                        </div>
+
+                        <div class="list-group">
+                            <h3>Country</h3>
+                            <?php
+                                $country = $product->getCountry();
+                                foreach($country as $countryDetails){
+                            ?>
+                            <div class="list-group-item checkbox">
+                                <label><input type="checkbox" class="productDetail brand" value="<?php echo $countryDetails['country']; ?>" > <?php echo $countryDetails['country']; ?></label>
+                            </div>
+                            <?php } ?>
+                        </div>
+
+                    </div>
+                        <div class="col-md-9">
+                            <div class="row searchResult">
+                            </div>
+                        </div>
+                </div>
             </div>
-            <p> HELLO </p>
         </div>
     </section>
 
@@ -892,6 +954,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
 
 <script src="../resources/js/home.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/bootstrap-slider.min.js"></script> -->
+<script src="../resources/js/search.js"></script>
 </body>
 
 </html>
