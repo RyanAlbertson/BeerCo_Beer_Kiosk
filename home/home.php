@@ -50,7 +50,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     </li>
 
                     <li class="nav__item">
-                        <a href="#featured" class="nav__link scroll-link">Featured</a>
+                        <a href="#all" class="nav__link scroll-link">Featured</a>
                     </li>
 
                     <li class="nav__item">
@@ -83,7 +83,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <div class="hero__left">
                 <h1>Beer Co.</h1>
                 <p>
-                    We bring you the best beer brands for you to enjoy. Exclusively available at Beer Co.
+                    We'll help you find the perfect beer.<br><br>
+                    Click below to start your search.
                 </p>
                 <a href="#all" class="button hero__btn">View Products</a>
             </div>
@@ -101,10 +102,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </div>
 </header>
 
-<<<<<<< Updated upstream
-=======
 <!-- New Products -->
->>>>>>> Stashed changes
 <main>
     <section class="section new" id="new">
         <div class="new__center container">
@@ -277,11 +275,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         </div>
     </section>
 
-<<<<<<< Updated upstream
-    <!-- 2 Featured Beers -->
-=======
 <!-- 2 Featured Beers -->
->>>>>>> Stashed changes
     <section class="section category">
         <div class="category__center container">
             <div class="category__left">
@@ -308,11 +302,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <section class="section all__products" id="all">
         <div class="all__center container">
             <div class="title">
-<<<<<<< Updated upstream
                 <h1>Featured Products</h1>
-=======
-                <h1>Featured Products Products</h1>
->>>>>>> Stashed changes
             </div>
 
             <div class="product__center">
@@ -636,11 +626,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         </div>
                     </div>
                 </div>
-<<<<<<< Updated upstream
             </div>
             <div class="product__center">
-=======
->>>>>>> Stashed changes
                 <div class="product">
                     <div class="product__header">
                         <img src="../resources/images/media/WildLittleThing-can-240x860.png" alt="">
@@ -807,22 +794,17 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </section>
 
 <!-- Find Beers -->
-<<<<<<< Updated upstream
     <section id="find">
-        <div>
-            <div class="title">
-                <h1>Find Beers</h1>
+        <div class="all__center container">
+            <div>
+                <div class="title">
+                   <h1>Find Beers</h1>
+                </div>
             </div>
+            <p> HELLO </p>
         </div>
     </section>
-=======
-    <div class="all__center container">
-                <div class="title">
-                    <h1>Find Beers</h1>
-                </div>
-    </div>
 
->>>>>>> Stashed changes
     <section class="contact container" id="contact">
         <div class="contact__left">
             <h1>Join Our Mailing List</h1>
@@ -848,8 +830,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <h3>Explore</h3>
                 <a href="#header">Home</a>
                 <a href="#new">New</a>
-                <a href="#all">Shop</a>
-                <a href="#featured">Featured</a>
+                <a href="find">Find</a>
+\               <a href="#all">Featured</a>
                 <a href="#contact">Contact Us</a>
             </div>
             <div class="footer-top__box">
