@@ -35,7 +35,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <nav class="nav">
         <div class="nav__center container">
             <div class="logo">
-                <h1><a href="#header" style="color: black;">Beer Co.</a></h1>
+                <h1><a href="#header" style="color: #4a1667;">Beer Co.</a></h1>
             </div>
 
             <div class="nav__menu">
@@ -101,6 +101,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </div>
 </header>
 
+<<<<<<< Updated upstream
+=======
+<!-- New Products -->
+>>>>>>> Stashed changes
 <main>
     <section class="section new" id="new">
         <div class="new__center container">
@@ -273,7 +277,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
         </div>
     </section>
 
+<<<<<<< Updated upstream
     <!-- 2 Featured Beers -->
+=======
+<!-- 2 Featured Beers -->
+>>>>>>> Stashed changes
     <section class="section category">
         <div class="category__center container">
             <div class="category__left">
@@ -300,7 +308,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <section class="section all__products" id="all">
         <div class="all__center container">
             <div class="title">
+<<<<<<< Updated upstream
                 <h1>Featured Products</h1>
+=======
+                <h1>Featured Products Products</h1>
+>>>>>>> Stashed changes
             </div>
 
             <div class="product__center">
@@ -624,8 +636,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         </div>
                     </div>
                 </div>
+<<<<<<< Updated upstream
             </div>
             <div class="product__center">
+=======
+>>>>>>> Stashed changes
                 <div class="product">
                     <div class="product__header">
                         <img src="../resources/images/media/WildLittleThing-can-240x860.png" alt="">
@@ -787,10 +802,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     </div>
                 </div>
             </div>
+            </div>
         </div>
     </section>
 
 <!-- Find Beers -->
+<<<<<<< Updated upstream
     <section id="find">
         <div>
             <div class="title">
@@ -798,6 +815,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             </div>
         </div>
     </section>
+=======
+    <div class="all__center container">
+                <div class="title">
+                    <h1>Find Beers</h1>
+                </div>
+    </div>
+
+>>>>>>> Stashed changes
     <section class="contact container" id="contact">
         <div class="contact__left">
             <h1>Join Our Mailing List</h1>
