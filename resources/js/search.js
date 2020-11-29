@@ -1,10 +1,11 @@
+// Initializes search when input is passed from home page.
 function filterSearch() {
     $('.searchResult').html('<div id="loading">Loading .....</div>');
     var action = 'fetch_data';
     var brand = getFilterData('Brand_Name');
     var brewer = getFilterData('Brewer');
     var region = getFilterData('Origin_region');
-    var country = getFilterData('Origin_country')
+    var country = getFilterData('Origin_Country')
     $.ajax({
         url:"action.php",
         method:"POST",

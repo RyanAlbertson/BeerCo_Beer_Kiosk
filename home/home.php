@@ -3,6 +3,7 @@
 
 // TODO:    -Make featured beers clickable to individual products pages.
 //          -Add individual product page for each beer.
+//          -Separate page for "contact us"?
 
 
 session_start();
@@ -20,12 +21,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../resources/css/home.css">
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Find Beer Feature -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/css/bootstrap-slider.min.css" rel="stylesheet"/> -->
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/css/bootstrap-slider.min.css" rel="stylesheet"/> -->
+    <script src="../resources/js/home.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/bootstrap-slider.min.js"></script> -->
+    <script src="../resources/js/search.js"></script>
 
     <title>Beer Co.</title>
 </head>
@@ -88,7 +93,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                     We'll help you find the perfect beer.<br><br>
                     Click below to start your search.
                 </p>
-                <a href="#all" class="button hero__btn">View Products</a>
+                <a href="#all" class="button hero__btn">View Beers</a>
             </div>
 
             <div class="hero__right">
@@ -109,7 +114,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <section class="section new" id="new">
         <div class="new__center container">
             <div class="title">
-                <h1>New Products</h1>
+                <h1>New Beers</h1>
             </div>
 
             <div class="product__center">
@@ -284,7 +289,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <div class="content">
                     <h2>Best Beer in Town</h2>
                     <h1>Miller</h1>
-                    <a href="#all" class="button category__btn">View Products</a>
+                    <a href="#all" class="button category__btn">View Beers</a>
                 </div>
                 <img src="../resources/images/media/miller-genuine-draft.png" alt="">
             </div>
@@ -293,18 +298,18 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <div class="content">
                     <h2>Big Save</h2>
                     <h1>Save 50%</h1>
-                    <a href="#all" class="button category__btn">View Products</a>
+                    <a href="#all" class="button category__btn">View Beers</a>
                 </div>
                 <img src="../resources/images/media/tecatelight.png" alt="">
             </div>
         </div>
     </section>
 
-<!-- Featured Products -->
+<!-- Featured Beers -->
     <section class="section all__products" id="all">
         <div class="all__center container">
             <div class="title">
-                <h1>Featured Products</h1>
+                <h1>Featured Beers</h1>
             </div>
 
             <div class="product__center">
@@ -795,82 +800,91 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <!-- Find Beers -->
     <section id="find">
         <div class="all__center container">
-            <div>
-                <div class="title">
-                   <h1>Find Beers</h1>
-                </div>
-                <div class="container">
-                <?php
-                    include('Product.php');
-                    $product = new Product();
-                ?>
-                <div class="row">
-                    <div class="col-md-3">
-
-                        <div class="list-group">
-                            <h3>Brand</h3>
-                            <div class="brandSection">
-                                <?php
-                                    $brand = $product->getBrand();
-                                    foreach($brand as $brandDetails){
-                                ?>
-                                <div class="list-group-item checkbox">
-                                    <label><input type="checkbox" class="productDetail brand" value="<?php echo $brandDetails["brand"]; ?>" > <?php echo $brandDetails["brand"]; ?></label>
-                                </div>
-                                <?php } ?>
-                            </div>
+            <div class="title">
+                <h1>Find Beers</h1>
+            </div>
+            <?php
+                include('Product.php');
+                $product = new Product();
+            ?>
+            <div class="row">
+                <div class="col-md-3">
+                    <h2>Brand</h2>
+                    <div class="list-group" style="height: 220px;
+                                                   width: 170px;
+	                                               overflow-y: auto;
+	                                               overflow-x: hidden;">
+                        <?php
+                            $brand = $product->getBrand();
+                            foreach($brand as $brandDetails) {
+                        ?>
+                        <div class="list-group-item checkbox">
+                            <label><input type="checkbox" class="productDetail brand" value="<?php echo $brandDetails["Brand_Name"]; ?>" > <?php echo $brandDetails["Brand_Name"]; ?></label>
                         </div>
-
-                        <div class="list-group">
-                            <h3>Brewer</h3>
-                            <?php
-                                $brewer = $product->getBrewer();
-                                foreach($brewer as $brewerDetails){
-                            ?>
-                            <div class="list-group-item checkbox">
-                                <label><input type="checkbox" class="productDetail brand" value="<?php echo $brewerDetails['brewer']; ?>" > <?php echo $brewerDetails['brewer']; ?></label>
-                            </div>
-                            <?php } ?>
-                        </div>
-
-                        <div class="list-group">
-                            <h3>Region</h3>
-                            <?php
-                                $region = $product->getRegion();
-                                foreach($region as $regionDetails){
-                            ?>
-                            <div class="list-group-item checkbox">
-                                <label><input type="checkbox" class="productDetail brand" value="<?php echo $regionDetails['region']; ?>" > <?php echo $regionDetails['region']; ?></label>
-                            </div>
-                            <?php } ?>
-                        </div>
-
-                        <div class="list-group">
-                            <h3>Country</h3>
-                            <?php
-                                $country = $product->getCountry();
-                                foreach($country as $countryDetails){
-                            ?>
-                            <div class="list-group-item checkbox">
-                                <label><input type="checkbox" class="productDetail brand" value="<?php echo $countryDetails['country']; ?>" > <?php echo $countryDetails['country']; ?></label>
-                            </div>
-                            <?php } ?>
-                        </div>
-
+                        <?php } ?>
                     </div>
-                        <div class="col-md-9">
-                            <div class="row searchResult">
-                            </div>
+                    <br />
+                    <h2>Brewer</h2>
+                    <div class="list-group" style="height: 220px;
+                                                   width: 170px;
+	                                               overflow-y: auto;
+                                                   overflow-x: hidden;">
+                        <?php
+                            $brewer = $product->getBrewer();
+                            foreach($brewer as $brewerDetails) {
+                        ?>
+                        <div class="list-group-item checkbox">
+                            <label><input type="checkbox" class="productDetail brand" value="<?php echo $brewerDetails["Brewer"]; ?>" > <?php echo $brewerDetails["Brewer"]; ?></label>
                         </div>
+                        <?php } ?>
+                    </div>
+                    <br />
+                    <h2>Region</h2>
+                    <div class="list-group" style="height: 220px;
+                                                   width: 170px;
+	                                               overflow-y: auto;
+                                                   overflow-x: hidden;">
+                        <?php
+                            $region = $product->getRegion();
+                            foreach($region as $regionDetails) {
+                        ?>
+                        <div class="list-group-item checkbox">
+                            <label><input type="checkbox" class="productDetail brand" value="<?php echo $regionDetails["Origin_region"]; ?>" > <?php echo $regionDetails["Origin_region"]; ?></label>
+                        </div>
+                        <?php } ?>
+                    </div>
+                    <br />
+                    <h2>Country</h2>
+                    <div class="list-group" style="height: 220px;
+                                                   width: 170px;
+	                                               overflow-y: auto;
+                                                   overflow-x: hidden;">
+                        <?php
+                            $country = $product->getCountry();
+                            foreach($country as $countryDetails) {
+                        ?>
+                        <div class="list-group-item checkbox">
+                            <label><input type="checkbox" class="productDetail brand" value="<?php echo $countryDetails["Origin_Country"]; ?>" > <?php echo $countryDetails["Origin_Country"]; ?></label>
+                        </div>
+                        <?php } ?>
+                    </div>
+
+                    <div class="col-md-9">
+                        <br />
+                        <div class="row searchResult">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+<!-- Email Sign Up --- Doesn't work on localhost? -->
     <section class="contact container" id="contact">
         <div class="contact__left">
             <h1>Join Our Mailing List</h1>
-            <p>If you like our products, and want to stay tuned to all the new arrivals. Please Subscribe to get the latest offers.</p>
+            <p>If you like our products, and want to stay tuned to all the new arrivals,
+            <br /> please Subscribe to get the latest offers.</p>
         </div>
         <div class="contact__right">
             <form action="<?php /* $subject='Welcome to BeerCo!';
@@ -893,7 +907,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <a href="#header">Home</a>
                 <a href="#new">New</a>
                 <a href="find">Find</a>
-\               <a href="#all">Featured</a>
+                <a href="#all">Featured</a>
                 <a href="#contact">Contact Us</a>
             </div>
             <div class="footer-top__box">
@@ -951,13 +965,5 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     </div>
     </div>
 </footer>
-
-
-<script src="../resources/js/home.js"></script>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/bootstrap-slider.min.js"></script> -->
-<script src="../resources/js/search.js"></script>
 </body>
-
 </html>
