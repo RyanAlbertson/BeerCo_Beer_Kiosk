@@ -414,6 +414,14 @@ h3 {
     background-color: var(--primaryColor);
 }
 
+.product1 {
+	border:1px solid #ccc; 
+	border-radius:5px; 
+	padding:16px; 
+	margin-bottom:16px; 
+	height:250px;
+}
+
 .product__header {
     position: relative;
     padding: .5rem;

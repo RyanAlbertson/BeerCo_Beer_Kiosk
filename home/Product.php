@@ -2,7 +2,7 @@
 // Used to get filtered product data from the beer_co database.
 class Product {
 
-    private $table = 'product_data';
+    private $table = "product_data";
     private $dbConnect = false;
 
     // Establishes connecton to database.
@@ -43,7 +43,7 @@ class Product {
 		return $numRows;
 	}
 
-    // Gets brand names from beer_co database.
+    // Gets brand names from beer_co database. For scrollbox.
     public function getBrand() {
 		$sqlQuery = "
 			SELECT DISTINCT(Brand_Name)
@@ -51,7 +51,7 @@ class Product {
         return  $this->getData($sqlQuery);
     }
 
-    // Gets brewer names from beer_co database.
+    // Gets brewer names from beer_co database. For scrollbox.
     public function getBrewer() {
 		$sqlQuery = "
 			SELECT DISTINCT(Brewer)
@@ -59,7 +59,7 @@ class Product {
         return  $this->getData($sqlQuery);
     }
 
-    // Gets region names from beer_co database.
+    // Gets region names from beer_co database. For scrollbox.
     public function getRegion() {
 		$sqlQuery = "
 			SELECT DISTINCT(Origin_region)
@@ -67,7 +67,7 @@ class Product {
         return  $this->getData($sqlQuery);
     }
 
-    // Gets country names from beer_co database.
+    // Gets country names from beer_co database. For scrollbox.
     public function getCountry() {
 		$sqlQuery = "
 			SELECT DISTINCT(Origin_Country)
@@ -75,8 +75,10 @@ class Product {
         return  $this->getData($sqlQuery);
     }
 
-    // Gets and displays the queried beers.
+    // Queries beers using given filters. Generates formatted HTML to display results
     public function searchProducts() {
+
+        echo "INSIDE searchProducts IN PRODUCT.PHP";
 
         $sqlQuery = "SELECT * FROM ".$this->table."";
         if(isset($_POST["Brand_Name"])) {
@@ -112,7 +114,7 @@ class Product {
                                                  border-radius:5px;
                                                  padding:16px
                                                  margin-bottom:16px;
-                                                 height:250px;">>
+                                                 height:250px;">
                         <p align="center"><strong><a href="#">'. $row['product_id'] .'</a></strong></p>
                         <p>
                             Brand : '. $row["Brand_Name"] .' <br />

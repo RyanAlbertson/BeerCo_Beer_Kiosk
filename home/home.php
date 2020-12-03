@@ -3,7 +3,6 @@
 
 // TODO:    -Make featured beers clickable to individual products pages.
 //          -Add individual product page for each beer.
-//          -Separate page for "contact us"?
 
 
 session_start();
@@ -20,17 +19,18 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../resources/css/home.css">
-
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/css/bootstrap-slider.min.css" rel="stylesheet"/> -->
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="../resources/css/home.css">
+    <!--
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/css/bootstrap-slider.min.css" rel="stylesheet"/>
+    -->
     <script src="../resources/js/home.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/bootstrap-slider.min.js"></script> -->
-    <script src="../resources/js/search.js"></script>
 
     <title>Beer Co.</title>
 </head>
@@ -819,8 +819,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                             foreach($brand as $brandDetails) {
                         ?>
                         <div class="list-group-item checkbox">
-                            <label><input type="checkbox" class="productDetail brand" value="<?php echo $brandDetails["Brand_Name"]; ?>" > <?php echo $brandDetails["Brand_Name"]; ?></label>
+                            <label><input type="checkbox" class="productDetail Brand_Name" value="<?php echo $brandDetails["Brand_Name"]; ?>" > <?php echo $brandDetails["Brand_Name"]; ?></label>
                         </div>
+
+
+
                         <?php } ?>
                     </div>
                     <br />
@@ -834,7 +837,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                             foreach($brewer as $brewerDetails) {
                         ?>
                         <div class="list-group-item checkbox">
-                            <label><input type="checkbox" class="productDetail brand" value="<?php echo $brewerDetails["Brewer"]; ?>" > <?php echo $brewerDetails["Brewer"]; ?></label>
+                            <label><input type="checkbox" class="productDetail Brewer" value="<?php echo $brewerDetails["Brewer"]; ?>" > <?php echo $brewerDetails["Brewer"]; ?></label>
                         </div>
                         <?php } ?>
                     </div>
@@ -849,7 +852,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                             foreach($region as $regionDetails) {
                         ?>
                         <div class="list-group-item checkbox">
-                            <label><input type="checkbox" class="productDetail brand" value="<?php echo $regionDetails["Origin_region"]; ?>" > <?php echo $regionDetails["Origin_region"]; ?></label>
+                            <label><input type="checkbox" class="productDetail Origin_region" value="<?php echo $regionDetails["Origin_region"]; ?>" > <?php echo $regionDetails["Origin_region"]; ?></label>
                         </div>
                         <?php } ?>
                     </div>
@@ -864,7 +867,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                             foreach($country as $countryDetails) {
                         ?>
                         <div class="list-group-item checkbox">
-                            <label><input type="checkbox" class="productDetail brand" value="<?php echo $countryDetails["Origin_Country"]; ?>" > <?php echo $countryDetails["Origin_Country"]; ?></label>
+                            <label><input type="checkbox" class="productDetail Origin_Country" value="<?php echo $countryDetails["Origin_Country"]; ?>" > <?php echo $countryDetails["Origin_Country"]; ?></label>
                         </div>
                         <?php } ?>
                     </div>
@@ -934,7 +937,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                 <use xlink:href="sprite.svg#icon-location"></use>
                             </svg>
                         </span>
-                    100 Beer street, 12345 NJ, USA
+                    100 Beer Street, 12345 NJ, USA
                 </div>
                 <div>
                         <span>

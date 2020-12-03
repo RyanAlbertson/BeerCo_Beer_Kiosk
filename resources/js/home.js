@@ -1,5 +1,11 @@
+// REMOVE?? ///////
+$(document).ready(function(){
+    filterSearch();
+    $('.productDetail').click(function(){
+        filterSearch();
+    });
+});
 
-const openNav = document.querySelector('.hamburger');
 const closeNav = document.querySelector('.nav__close');
 const nav = document.querySelector('.nav__list');
 
@@ -40,3 +46,31 @@ scrollLink.forEach(link => {
         document.body.classList.remove("active");
     })
 })
+
+// Displays filtered beers
+function filterSearch() {
+    $('.searchResult').html('<div id="loading">Loading .....</div>');
+    var action = "fetch_data";
+    var brand = getFilterData("Brand_Name");
+    var brewer = getFilterData("Brewer");
+    var region = getFilterData("Origin_region");
+    var country = getFilterData("Origin_Country")
+    $.ajax({
+        url:"action.php",
+        method:"POST",
+        dataType: "json",
+        data:{action:action, Brand_Name:brand, Brewer:brewer, Origin_region:region, Origin_Country:country},
+        success:function(data){
+            $('.searchResult').html(data.html);
+        }
+    });
+}
+
+// Finds checked categories
+function getFilterData(className) {
+	var filter = [];
+	$('.'+className+':checked').each(function(){
+		filter.push($(this).val());
+	});
+	return filter;
+}
