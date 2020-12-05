@@ -1,11 +1,3 @@
-// REMOVE?? ///////
-$(document).ready(function(){
-    filterSearch();
-    $('.productDetail').click(function(){
-        filterSearch();
-    });
-});
-
 const closeNav = document.querySelector('.nav__close');
 const nav = document.querySelector('.nav__list');
 
@@ -46,6 +38,13 @@ scrollLink.forEach(link => {
         document.body.classList.remove("active");
     })
 })
+
+$(document).ready(function(){
+    filterSearch();
+    $(".productDetail").click(function(){
+        filterSearch();
+    });
+});
 
 // Displays filtered beers
 function filterSearch() {

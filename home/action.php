@@ -1,10 +1,7 @@
 <?php
 // Searches for filtered products. Returns the HTML formating of the results.
-session_start();
-include 'Product.php';
 
-echo "INSIDE ACTION.PHP";
-
+require_once "Product.php";
 $product = new Product();
 if(isset($_POST["action"])){
     $html = $product->searchProducts($_POST);
