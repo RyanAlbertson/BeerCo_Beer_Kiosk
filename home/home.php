@@ -1,10 +1,4 @@
 <?php
-
-
-// TODO:    -Make featured beers clickable to individual products pages.
-//          -Add individual product page for each beer.
-
-
 session_start();
 // Send user to login page if they're not logged in
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
@@ -19,18 +13,21 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="../resources/css/home.css">
-    <!--
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/css/bootstrap-slider.min.css" rel="stylesheet"/>
-    -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/css/bootstrap-slider.min.css" rel="stylesheet"/> -->
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="../resources/js/home.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/bootstrap-slider.min.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.0/bootstrap-slider.min.js"></script>
 
     <title>Beer Co.</title>
 </head>
@@ -363,7 +360,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                             </span>
                     </div>
                     <div class="product__footer">
-                        <h2>BudWeiser Beer</h2>
+                        <h2>Budweiser</h2>
                         <div class="rating">
                                 <span>
                                     <svg>
@@ -803,12 +800,26 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <div class="title">
                 <h1>Find Beers</h1>
             </div>
-            <?php
-                include('Product.php');
-                $product = new Product();
-            ?>
             <div class="row">
                 <div class="col-md-3">
+
+                    <h2>Search For Beer</h2>
+                    <div class="searchBarClass">
+                        <input type="text" id="searchBar" class="form-control" placeholder="Start typing a beer brand..." size="24">
+                    </div>
+                    <script type="text/javascript">
+                        $(function() {
+                            $("#searchBar").autocomplete({
+                                source: "search.php",
+                            });
+                        });
+                    </script>
+                    <br />
+
+                    <?php
+                        include('Product.php');
+                        $product = new Product();
+                    ?>
                     <h2>Brand</h2>
                     <div class="list-group" style="height: 220px;
                                                    width: 170px;
@@ -821,12 +832,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         <div class="list-group-item checkbox">
                             <label><input type="checkbox" class="productDetail Brand_Name" value="<?php echo $brandDetails["Brand_Name"]; ?>" > <?php echo $brandDetails["Brand_Name"]; ?></label>
                         </div>
-
-
-
                         <?php } ?>
                     </div>
                     <br />
+
                     <h2>Brewer</h2>
                     <div class="list-group" style="height: 220px;
                                                    width: 170px;
@@ -837,12 +846,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                             foreach($brewer as $brewerDetails) {
                         ?>
                         <div class="list-group-item checkbox">
-                            <label><input type="checkbox" class="productDetail Brewer" value="<?php echo $brewerDetails["Brewer"]; ?>" > <?php echo $brewerDetails["Brewer"]; ?></label>
+                            <label><input type="checkbox" id="checkbox" class="productDetail Brewer" value="<?php echo $brewerDetails["Brewer"]; ?>" > <?php echo $brewerDetails["Brewer"]; ?></label>
                         </div>
                         <?php } ?>
                     </div>
                     <br />
                     <h2>Region</h2>
+
                     <div class="list-group" style="height: 220px;
                                                    width: 170px;
 	                                               overflow-y: auto;
@@ -857,6 +867,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         <?php } ?>
                     </div>
                     <br />
+
                     <h2>Country</h2>
                     <div class="list-group" style="height: 220px;
                                                    width: 170px;
