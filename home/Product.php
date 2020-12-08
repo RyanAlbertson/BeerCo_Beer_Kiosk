@@ -78,8 +78,6 @@ class Product {
     // Queries beers using given filters. Generates formatted HTML to display results
     public function searchProducts() {
 
-        echo "INSIDE searchProducts IN PRODUCT.PHP";
-
         $sqlQuery = "SELECT * FROM ".$this->table."";
         if(isset($_POST["Brand_Name"])) {
             $brandFilterData = implode("','", $_POST["Brand_Name"]);

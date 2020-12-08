@@ -17,7 +17,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <link rel="stylesheet" href="../resources/css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
     <!-- Overrides our own CSS
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    -->
     <script src="../resources/js/home.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -114,15 +115,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <div class="product__center">
                 <div class="product">
                     <div class="product__header">
-                        <img src="../resources/images/media/budlight.png" alt="">
+                        <img src="../resources/images/media/guinness.png" alt="">
                         <span class="flex__center">
-                                <svg>
-                                    <use xlink:href="sprite.svg#icon-camera"></use>
-                                </svg>
-                            </span>
+                            <form action="../product/product.php" method="post">
+                                <button type="submit" name="productId_&_imgFilePath" value="1795|../resources/images/media/budlight.png" style="border:0;"><img src="../resources/images/camera_icon.png" height="52" BORDER="0"></button>
+                            </form>
+                        </span>
                     </div>
                     <div class="product__footer">
-                        <h2>Bud Light Seltzer</h2>
+                        <h2>Guinness Draught</h2>
                         <div class="rating">
                                 <span>
                                     <svg>
@@ -802,7 +803,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
                     <h2>Search For Beer</h2>
                     <div class="searchBarClass">
-                        <input type="text" id="searchBar" class="form-control" placeholder="Start typing a beer brand..." size="24">
+                        <input type="text" id="searchBar"               class="form-control" placeholder="Start typing a beer brand..." size="24">
                     </div>
                     <script type="text/javascript">
                         $(function() {
