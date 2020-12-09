@@ -22,8 +22,6 @@ class Product {
     private function getData($sqlQuery) {
 		$result = mysqli_query($this->dbConnect, $sqlQuery);
 		if(!$result){
-            //QUERY FAILS HERE
-            // printf("Error: %s\n", mysqli_error($this->dbConnect));
 			die('ERROR: SQL query failed: '. mysqli_error());
 		}
 		$data= array();

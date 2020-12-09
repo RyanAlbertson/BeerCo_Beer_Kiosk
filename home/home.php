@@ -118,7 +118,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                         <img src="../resources/images/media/guinness.png" alt="">
                         <span class="flex__center">
                             <form action="../product/product.php" method="post">
-                                <button type="submit" name="productId_&_imgFilePath" value="1795|../resources/images/media/budlight.png" style="border:0;"><img src="../resources/images/camera_icon.png" height="52" BORDER="0"></button>
+                                <button type="submit" name="productId_&_imgFilePath" value="1795|../resources/images/media/guinness.png" style="border:0;"><img src="../resources/images/camera_icon.png" height="52" BORDER="0"></button>
                             </form>
                         </span>
                     </div>
@@ -156,11 +156,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <div class="product">
                     <div class="product__header">
                         <img src="../resources/images/media/coorslight.png" alt="">
-                        <span>
-                                <svg>
-                                    <use xlink:href="sprite.svg#icon-camera"></use>
-                                </svg>
-                            </span>
+                        <span class="flex__center">
+                            <form action="../product/product.php" method="post">
+                                <button type="submit" name="productId_&_imgFilePath" value="3470|../resources/images/media/coorslight.png" style="border:0;"><img src="../resources/images/camera_icon.png" height="52" BORDER="0"></button>
+                            </form>
+                        </span>
                     </div>
                     <div class="product__footer">
                         <h2>Coors Light</h2>
@@ -803,7 +803,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
                     <h2>Search For Beer</h2>
                     <div class="searchBarClass">
-                        <input type="text" id="searchBar"               class="form-control" placeholder="Start typing a beer brand..." size="24">
+                        <input type="text" name="searchBar" class="form-control" placeholder="Start typing a beer brand..." size="24">
                     </div>
                     <script type="text/javascript">
                         $(function() {

@@ -9,12 +9,25 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 $productInfo = explode("|", $_POST["productId_&_imgFilePath"]);
 $productId = $productInfo[0];
 $productImgPath = $productInfo[1];
+
+require_once("../resources/data/config.php");
+$table = "product_data";
+$conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+$query = "SELECT * FROM product_data WHERE product_id LIKE ".$productId."";
+$result = mysqli_query($conn, $query);
+if(!$result){
+    header("location: ../404.html");
+    exit;
+    // die('ERROR: SQL query failed');
+}
+$row = mysqli_fetch_array($result);
+
+$brandName = $row['Brand_Name'];
+$beerStyle = $row['Primary_Beer_Style'];
+$abv = $row['ABV'];
+$ibu = $row['IBU'];
+$description = $row['Specific_Beer_Style_Description'];
 ?>
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,56 +38,36 @@ $productImgPath = $productInfo[1];
     <link rel="stylesheet" href="../resources/css/ProductsPageStyle.css">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700&display=swap" rel="stylesheet">
-    <title> BEER BRAND | Beer Co.</title>
+    <title> <?php echo $brandName; ?> | Beer Co.</title>
 </head>
 <body>
-<div class="container">
-    <div class="card">
-        <div class="shoeBackground">
-            <div class="gradients">
-                <div class="gradient second" color="blue"></div>
+    <div class="container">
+        <div class="card">
+            <div class="shoeBackground">
+                <div class="gradients">
+                    <div class="gradient second" color="blue"></div>
 
-            </div>
-            <h1 class="nike">Beer Co.</h1>
-            <!-- <img src="img/logo.png" alt="" class="logo"><a href="#" class="share"><i class="fas fa-share-alt"></i></a> -->
-
-
-            <img src="../resources/images/media/budlight.png" alt="" class="shoe show" style="margin:0px 0px 20px 0px;">
-
-        </div>
-        <div class="info">
-            <div class="shoeName">
-                <div>
-                    <h1 class="big">BudLight Seltzer</h1>
-                    <span class="new">new</span>
                 </div>
-                <h3 class="small">BudLight Original Pure Malt</h3>
+                <h1 class="nike">Beer Co.</h1>
+                <img src="<?php echo $productImgPath; ?>" alt="" class="shoe show" style="margin:0px 0px 20px 0px;">
             </div>
-            <div class="description">
-                <h3 class="title">Product Info</h3>
-                <p class="text"><?php echo $productId; ?></p>
-            </div>
-            <div class="size-container">
-                <h3 class="title">size</h3>
-                <div class="sizes">
-                    <span class="size">S</span>
-                    <span class="size">M</span>
-                    <span class="size active">L</span>
+            <div class="info">
+                <div class="shoeName">
+                    <div>
+                        <h1 class="big"><?php echo $brandName; ?></h1>
+                    </div>
+                    <h3 class="small"><?php echo $beerStyle; ?></h3>
                 </div>
-            </div>
-            <div class="buy-price">
-                <a href="../home/home.php" class="buy">Home</a>
-                <div class="price">
-                    <i class="fas fa-dollar-sign"></i>
-                    <h1>20</h1>
+                <div class="description">
+                    <h4>ABV: <?php echo $abv; ?>% &emsp; IBU: <?php echo $ibu; ?></h4>
+                    <p class="text"><?php echo $description; ?></p>
+                </div>
+                <div class="buy-price">
+                    <a href="../home/home.php#new" class="buy">Browse More Beer</a>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-<script src="ProductsPageApp.js"></script>
-
-
+    <script src="../resources/ProductsPageApp.js"></script>
 </body>
 </html>

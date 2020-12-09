@@ -1,5 +1,5 @@
 :root{
-    --primary: #9566ad;
+    --primary: #4a1667;
 }
 *{
     margin: 0;
@@ -62,7 +62,7 @@ body{
     z-index: -1;
 }
 .gradient[color="blue"]{
-    background-image: linear-gradient(45deg, #4a1667, #9566ad);
+    background-image: linear-gradient(90deg, #9566ad, #4a1667);
 }
 .gradient[color="red"]{
     background-image: linear-gradient(45deg, #d62926, #ee625f);
@@ -110,6 +110,7 @@ body{
 }
 .info{
     width: 50%;
+    height: 475px;
     background-color: #fff;
     z-index: 1;
     padding: 35px 40px;
