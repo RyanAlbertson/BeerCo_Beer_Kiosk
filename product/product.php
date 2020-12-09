@@ -1,7 +1,7 @@
 <?php
 session_start();
 // Send user to login page if they're not logged in
-if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
     header("location: ".dirname(__FILE__, 2)."../index.php");
     exit;
 }
@@ -38,20 +38,17 @@ $description = $row['Specific_Beer_Style_Description'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../resources/css/ProductsPageStyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700&display=swap">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700&display=swap" rel="stylesheet">
     <title> <?php echo $brandName; ?> | Beer Co.</title>
 </head>
 <body>
     <div class="container">
         <div class="card">
-            <div class="shoeBackground">
-                <div class="gradients">
-                    <div class="gradient second" color="blue"></div>
-
-                </div>
+            <div class="shoeBackground" style="">
+                <div class="gradient second" color="blue"></div>
                 <h1 class="nike">Beer Co.</h1>
-                    <img src="<?php echo $productImgPath; ?>" alt="" class="shoe show"/>
+                <img src="<?php echo $productImgPath; ?>" style="display:block; margin-left:auto; margin-right:auto; vertical-align:middle;" class="shoe show"/>
             </div>
             <div class="info">
                 <div class="shoeName">
