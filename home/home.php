@@ -195,12 +195,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
                 <div class="product">
                     <div class="product__header">
-                        <img src="../resources/images/media/discount.png" alt="">
-                        <span>
-                                <svg>
-                                    <use xlink:href="sprite.svg#icon-camera"></use>
-                                </svg>
-                            </span>
+                        <img src="../resources/images/media/corona.png" alt="">
+                        <span class="flex__center">
+                            <form action="../product/product.php" method="post">
+                                <button type="submit" name="productId_&_imgFilePath" value="1619|../resources/images/media/corona.png" style="border:0;"><img src="../resources/images/camera_icon.png" height="52" BORDER="0"></button>
+                            </form>
+                        </span>
                     </div>
                     <div class="product__footer">
                         <h2>Corona Extra</h2>
@@ -236,11 +236,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <div class="product">
                     <div class="product__header">
                         <img src="../resources/images/media/heineken-beer.png" alt="">
-                        <span>
-                                <svg>
-                                    <use xlink:href="sprite.svg#icon-camera"></use>
-                                </svg>
-                            </span>
+                        <span class="flex__center">
+                            <form action="../product/product.php" method="post">
+                                <button type="submit" name="productId_&_imgFilePath" value="2832|../resources/images/media/heineken-beer.png" style="border:0;"><img src="../resources/images/camera_icon.png" height="52" BORDER="0"></button>
+                            </form>
+                        </span>
                     </div>
                     <div class="product__footer">
                         <h2>Heineken Beer</h2>
@@ -311,14 +311,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <div class="product">
                     <div class="product__header">
                         <img src="../resources/images/media/amstel.png" alt="">
-                        <span>
-                                <svg>
-                                    <use xlink:href="sprite.svg#icon-camera"></use>
-                                </svg>
-                            </span>
+                        <span class="flex__center">
+                            <form action="../product/product.php" method="post">
+                                <button type="submit" name="productId_&_imgFilePath" value="2801|../resources/images/media/amstel.png" style="border:0;"><img src="../resources/images/camera_icon.png" height="52" BORDER="0"></button>
+                            </form>
+                        </span>
                     </div>
                     <div class="product__footer">
-                        <h2>Amstel</h2>
+                        <h2>Amstel Light</h2>
                         <div class="rating">
                                 <span>
                                     <svg>
@@ -351,11 +351,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <div class="product">
                     <div class="product__header">
                         <img src="../resources/images/media/budweiser-beer-bottle.png" alt="">
-                        <span>
-                                <svg>
-                                    <use xlink:href="sprite.svg#icon-camera"></use>
-                                </svg>
-                            </span>
+                        <span class="flex__center">
+                            <form action="../product/product.php" method="post">
+                                <button type="submit" name="productId_&_imgFilePath" value="446|../resources/images/media/budweiser-beer-bottle.png" style="border:0;"><img src="../resources/images/camera_icon.png" height="52" BORDER="0"></button>
+                            </form>
+                        </span>
                     </div>
                     <div class="product__footer">
                         <h2>Budweiser</h2>
@@ -390,15 +390,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
                 <div class="product">
                     <div class="product__header">
-                        <img src="../resources/images/media/budlight.png" alt="">
-                        <span>
-                                <svg>
-                                    <use xlink:href="sprite.svg#icon-camera"></use>
-                                </svg>
-                            </span>
+                        <img src="../resources/images/media/fat-tire.png" alt="">
+                        <span class="flex__center">
+                            <form action="../product/product.php" method="post">
+                                <button type="submit" name="productId_&_imgFilePath" value="4312|../resources/images/media/fat-tire.png" style="border:0;"><img src="../resources/images/camera_icon.png" height="52" BORDER="0"></button>
+                            </form>
+                        </span>
                     </div>
                     <div class="product__footer">
-                        <h2>BudLight</h2>
+                        <h2>Fat Tire</h2>
                         <div class="rating">
                                 <span>
                                     <svg>
@@ -422,7 +422,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-empty"></use>
+                                        <use xlink:href="sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                         </div>
@@ -430,15 +430,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
                 <div class="product">
                     <div class="product__header">
-                        <img src="../resources/images/media/heineken-beer.png" alt="">
-                        <span>
-                                <svg>
-                                    <use xlink:href="sprite.svg#icon-camera"></use>
-                                </svg>
-                            </span>
+                        <img src="../resources/images/media/harpoon.png" alt="">
+                        <span class="flex__center">
+                            <form action="../product/product.php" method="post">
+                                <button type="submit" name="productId_&_imgFilePath" value="2771|../resources/images/media/harpoon.png" style="border:0;"><img src="../resources/images/camera_icon.png" height="52" BORDER="0"></button>
+                            </form>
+                        </span>
                     </div>
                     <div class="product__footer">
-                        <h2>Heineken</h2>
+                        <h2>Harpoon IPA</h2>
                         <div class="rating">
                                 <span>
                                     <svg>
@@ -471,11 +471,11 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <div class="product">
                     <div class="product__header">
                         <img src="../resources/images/media/coorslight.png" alt="">
-                        <span>
-                                <svg>
-                                    <use xlink:href="sprite.svg#icon-camera"></use>
-                                </svg>
-                            </span>
+                        <span class="flex__center">
+                            <form action="../product/product.php" method="post">
+                                <button type="submit" name="productId_&_imgFilePath" value="3470|../resources/images/media/coorslight.png" style="border:0;"><img src="../resources/images/camera_icon.png" height="52" BORDER="0"></button>
+                            </form>
+                        </span>
                     </div>
                     <div class="product__footer">
                         <h2>Coors Light</h2>
@@ -497,12 +497,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="sprite.svg#icon-star-empty"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="sprite.svg#icon-star-empty"></use>
                                     </svg>
                                 </span>
                         </div>
@@ -510,15 +510,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
                 <div class="product">
                     <div class="product__header">
-                        <img src="../resources/images/media/amstel-torp.png" alt="">
-                        <span>
-                                <svg>
-                                    <use xlink:href="sprite.svg#icon-camera"></use>
-                                </svg>
-                            </span>
+                        <img src="../resources/images/media/sol.png" alt="">
+                        <span class="flex__center">
+                            <form action="../product/product.php" method="post">
+                                <button type="submit" name="productId_&_imgFilePath" value="2048|../resources/images/media/sol.png" style="border:0;"><img src="../resources/images/camera_icon.png" height="52" BORDER="0"></button>
+                            </form>
+                        </span>
                     </div>
                     <div class="product__footer">
-                        <h2>Amstel Premium Beer</h2>
+                        <h2>Sol</h2>
                         <div class="rating">
                                 <span>
                                     <svg>
@@ -550,15 +550,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
                 <div class="product">
                     <div class="product__header">
-                        <img src="../resources/images/media/discount.png" alt="">
-                        <span>
-                                <svg>
-                                    <use xlink:href="sprite.svg#icon-camera"></use>
-                                </svg>
-                            </span>
+                        <img src="../resources/images/media/stella.png" alt="">
+                        <span class="flex__center">
+                            <form action="../product/product.php" method="post">
+                                <button type="submit" name="productId_&_imgFilePath" value="1279|../resources/images/media/stella.png" style="border:0;"><img src="../resources/images/camera_icon.png" height="52" BORDER="0"></button>
+                            </form>
+                        </span>
                     </div>
                     <div class="product__footer">
-                        <h2>Corona Extra</h2>
+                        <h2>Stella Artois</h2>
                         <div class="rating">
                                 <span>
                                     <svg>
@@ -577,7 +577,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="sprite.svg#icon-star-empty"></use>
                                     </svg>
                                 </span>
                             <span>
@@ -591,21 +591,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 <div class="product">
                     <div class="product__header">
                         <img src="../resources/images/media/busch%20beer.png" alt="">
-                        <span>
-                                <svg>
-                                    <use xlink:href="sprite.svg#icon-camera"></use>
-                                </svg>
-                            </span>
+                        <span class="flex__center">
+                            <form action="../product/product.php" method="post">
+                                <button type="submit" name="productId_&_imgFilePath" value="615|../resources/images/media/busch%20beer.png" style="border:0;"><img src="../resources/images/camera_icon.png" height="52" BORDER="0"></button>
+                            </form>
+                        </span>
                     </div>
                     <div class="product__footer">
-                        <h2>Busch Beer</h2>
+                        <h2>Busch</h2>
                         <div class="rating">
                                 <span>
-                                    <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
-                                    </svg>
-                                </span>
-                            <span>
                                     <svg>
                                         <use xlink:href="sprite.svg#icon-star-full"></use>
                                     </svg>
@@ -625,41 +620,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                                         <use xlink:href="sprite.svg#icon-star-empty"></use>
                                     </svg>
                                 </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product__header">
-                        <img src="../resources/images/media/WildLittleThing-can-240x860.png" alt="">
-                        <span>
-                                <svg>
-                                    <use xlink:href="sprite.svg#icon-camera"></use>
-                                </svg>
-                            </span>
-                    </div>
-                    <div class="product__footer">
-                        <h2>Sierra Nevada</h2>
-                        <div class="rating">
-                                <span>
-                                    <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
-                                    </svg>
-                                </span>
-                            <span>
-                                    <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
-                                    </svg>
-                                </span>
-                            <span>
-                                    <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
-                                    </svg>
-                                </span>
-                            <span>
-                                    <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
-                                    </svg>
-                                </span>
                             <span>
                                     <svg>
                                         <use xlink:href="sprite.svg#icon-star-empty"></use>
@@ -670,55 +630,15 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
                 <div class="product">
                     <div class="product__header">
-                        <img src="../resources/images/media/white-claw.png" alt="">
-                        <span>
-                                <svg>
-                                    <use xlink:href="sprite.svg#icon-camera"></use>
-                                </svg>
-                            </span>
+                        <img src="../resources/images/media/michelob.png" alt="">
+                        <span class="flex__center">
+                            <form action="../product/product.php" method="post">
+                                <button type="submit" name="productId_&_imgFilePath" value="987|../resources/images/media/michelob.png" style="border:0;"><img src="../resources/images/camera_icon.png" height="52" BORDER="0"></button>
+                            </form>
+                        </span>
                     </div>
                     <div class="product__footer">
-                        <h2>3-Pack - White Claw</h2>
-                        <div class="rating">
-                                <span>
-                                    <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
-                                    </svg>
-                                </span>
-                            <span>
-                                    <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
-                                    </svg>
-                                </span>
-                            <span>
-                                    <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
-                                    </svg>
-                                </span>
-                            <span>
-                                    <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
-                                    </svg>
-                                </span>
-                            <span>
-                                    <svg>
-                                        <use xlink:href="sprite.svg#icon-star-ful"></use>
-                                    </svg>
-                                </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="product">
-                    <div class="product__header">
-                        <img src="../resources/images/media/12th-of-Never-Can.png" alt="">
-                        <span>
-                                <svg>
-                                    <use xlink:href="sprite.svg#icon-camera"></use>
-                                </svg>
-                            </span>
-                    </div>
-                    <div class="product__footer">
-                        <h2>Lagunitas 12th Of Never</h2>
+                        <h2>Michelob Ultra</h2>
                         <div class="rating">
                                 <span>
                                     <svg>
@@ -750,15 +670,55 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                 </div>
                 <div class="product">
                     <div class="product__header">
-                        <img src="../resources/images/media/lagunitas.png" alt="">
-                        <span>
-                                <svg>
-                                    <use xlink:href="sprite.svg#icon-camera"></use>
-                                </svg>
-                            </span>
+                        <img src="../resources/images/media/modelo.png" alt="">
+                        <span class="flex__center">
+                            <form action="../product/product.php" method="post">
+                                <button type="submit" name="productId_&_imgFilePath" value="2673|../resources/images/media/modelo.png" style="border:0;"><img src="../resources/images/camera_icon.png" height="52" BORDER="0"></button>
+                            </form>
+                        </span>
                     </div>
                     <div class="product__footer">
-                        <h2>Lagunitas Super Ale</h2>
+                        <h2>Modelo Especial</h2>
+                        <div class="rating">
+                                <span>
+                                    <svg>
+                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                </span>
+                            <span>
+                                    <svg>
+                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                </span>
+                            <span>
+                                    <svg>
+                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                </span>
+                            <span>
+                                    <svg>
+                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                </span>
+                            <span>
+                                    <svg>
+                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product__header">
+                        <img src="../resources/images/media/bluemoon.png" alt="">
+                        <span class="flex__center">
+                            <form action="../product/product.php" method="post">
+                                <button type="submit" name="productId_&_imgFilePath" value="3380|../resources/images/media/bluemoon.png" style="border:0;"><img src="../resources/images/camera_icon.png" height="52" BORDER="0"></button>
+                            </form>
+                        </span>
+                    </div>
+                    <div class="product__footer">
+                        <h2>Blue Moon</h2>
                         <div class="rating">
                                 <span>
                                     <svg>
@@ -783,6 +743,46 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
                             <span>
                                     <svg>
                                         <use xlink:href="sprite.svg#icon-star-empty"></use>
+                                    </svg>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <div class="product__header">
+                        <img src="../resources/images/media/parabola.png" alt="">
+                        <span class="flex__center">
+                            <form action="../product/product.php" method="post">
+                                <button type="submit" name="productId_&_imgFilePath" value="2108|../resources/images/media/parabola.png" style="border:0;"><img src="../resources/images/camera_icon.png" height="52" BORDER="0"></button>
+                            </form>
+                        </span>
+                    </div>
+                    <div class="product__footer">
+                        <h2>Firestone Parabola</h2>
+                        <div class="rating">
+                                <span>
+                                    <svg>
+                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                </span>
+                            <span>
+                                    <svg>
+                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                </span>
+                            <span>
+                                    <svg>
+                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                </span>
+                            <span>
+                                    <svg>
+                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                    </svg>
+                                </span>
+                            <span>
+                                    <svg>
+                                        <use xlink:href="sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                         </div>

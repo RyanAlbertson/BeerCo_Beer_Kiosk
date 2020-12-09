@@ -6,10 +6,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 
+// Get this beer's productId and image file path from home page
 $productInfo = explode("|", $_POST["productId_&_imgFilePath"]);
 $productId = $productInfo[0];
 $productImgPath = $productInfo[1];
 
+// Get this beer's data from DB
 require_once("../resources/data/config.php");
 $table = "product_data";
 $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
@@ -49,7 +51,7 @@ $description = $row['Specific_Beer_Style_Description'];
 
                 </div>
                 <h1 class="nike">Beer Co.</h1>
-                <img src="<?php echo $productImgPath; ?>" alt="" class="shoe show" style="margin:0px 0px 20px 0px;">
+                    <img src="<?php echo $productImgPath; ?>" alt="" class="shoe show"/>
             </div>
             <div class="info">
                 <div class="shoeName">
@@ -60,7 +62,7 @@ $description = $row['Specific_Beer_Style_Description'];
                 </div>
                 <div class="description">
                     <h4>ABV: <?php echo $abv; ?>% &emsp; IBU: <?php echo $ibu; ?></h4>
-                    <p class="text"><?php echo $description; ?></p>
+                    <p class="text" style="height:220px; overflow-y:scroll;"><?php echo $description; ?></p>
                 </div>
                 <div class="buy-price">
                     <a href="../home/home.php#new" class="buy">Browse More Beer</a>

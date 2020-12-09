@@ -97,7 +97,7 @@ body{
 /* The actual Beer Picture */
 .shoe{
     position: absolute;
-    width: 100%;
+    width: auto;
     height: 90%;
     opacity: 0;
     bottom: 0;
