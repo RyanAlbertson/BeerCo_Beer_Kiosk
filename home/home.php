@@ -16,9 +16,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../resources/css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
-    <!-- Overrides our own CSS
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    -->
     <script src="../resources/js/home.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -37,7 +34,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
     <nav class="nav">
         <div class="nav__center container">
             <div class="logo">
-                <h1><a href="#header" style="color: #4a1667;">Beer Co.</a></h1>
+                <h1 style="color: #4a1667; font-size:65px;">Beer Co.</h1>
             </div>
 
             <div class="nav__menu">
