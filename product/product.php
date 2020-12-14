@@ -37,7 +37,7 @@ $description = $row['Specific_Beer_Style_Description'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../resources/css/ProductsPageStyle.css">
+    <link rel="stylesheet" href="../resources/css/ProductsPageStyle.css?ver=<?php echo rand(111,999) ?>">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700&display=swap">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <title> <?php echo $brandName; ?> | Beer Co.</title>
@@ -45,13 +45,13 @@ $description = $row['Specific_Beer_Style_Description'];
 <body>
     <div class="container">
         <div class="card">
-            <div class="shoeBackground" style="">
-                <div class="gradient second" color="blue"></div>
-                <h1 class="nike">Beer Co.</h1>
-                <img src="<?php echo $productImgPath; ?>" style="display:block; margin-left:auto; margin-right:auto; vertical-align:middle;" class="shoe show"/>
+            <div class="beerBackground" style="">
+                <div class="gradient second" color="purple"></div>
+                <h1 class="logoBG">Beer Co.</h1>
+                <img src="<?php echo $productImgPath; ?>" alt="" class="beer show" color="purple">
             </div>
             <div class="info">
-                <div class="shoeName">
+                <div class="data">
                     <div>
                         <h1 class="big"><?php echo $brandName; ?></h1>
                     </div>
@@ -59,7 +59,8 @@ $description = $row['Specific_Beer_Style_Description'];
                 </div>
                 <div class="description">
                     <h4>ABV: <?php echo $abv; ?>% &emsp; IBU: <?php echo $ibu; ?></h4>
-                    <p class="text" style="height:220px; overflow-y:scroll;"><?php echo $description; ?></p>
+                    <br/>
+                    <p class="text"> <?php echo $description; ?></p>
                 </div>
                 <div class="buy-price">
                     <a href="../home/home.php#new" class="buy">Browse More Beer</a>
