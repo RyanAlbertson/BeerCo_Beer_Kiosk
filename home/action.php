@@ -1,7 +1,6 @@
 <?php
 // Searches for filtered products. Returns the HTML formated results from action.php.
 
-
 require_once "Product.php";
 $product = new Product();
 if(isset($_POST["action"])){

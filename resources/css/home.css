@@ -213,7 +213,6 @@ h3 {
 
 .hero__right {
     flex: 1 1 60%;
-    /*background-image: url('images/media/heineken-original-bottle.png'); */
     background-position: 90% 40%;
     background-size: 70%;
     background-repeat: no-repeat;

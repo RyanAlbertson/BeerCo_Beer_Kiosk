@@ -9,7 +9,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +25,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
 
     <title>Beer Co.</title>
 </head>
-
 <body>
 
 <!-- Header -->
@@ -58,19 +56,19 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
 
                     <li class="nav__close flex__center">
                         <svg>
-                            <use xlink:href="sprite.svg#icon-cross"></use>
+                            <use xlink:href="../resources/images/sprite.svg#icon-cross"></use>
                         </svg>
                     </li>
                 </ul>
                 <div class="cart flex__center">
                     <svg>
-                        <use xlink:href="sprite.svg#icon-user"></use>
+                        <use xlink:href="../resources/images/sprite.svg#icon-user"></use>
                     </svg>
                 </div>
 
                 <div class="hamburger flex__center">
                     <svg>
-                        <use xlink:href="sprite.svg#icon-menu"></use>
+                        <use xlink:href="../resources/images/sprite.svg#icon-menu"></use>
                     </svg>
                 </div>
             </div>
@@ -95,7 +93,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
 
         <a href="#new" class="go-down flex__center">
             <svg>
-                <use xlink:href="sprite.svg#icon-angle-down"></use>
+                <use xlink:href="../resources/images/sprite.svg#icon-angle-down"></use>
             </svg>
         </a>
     </div>
@@ -124,27 +122,27 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
                         <div class="rating">
                                 <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-empty"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-empty"></use>
                                     </svg>
                                 </span>
                         </div>
@@ -164,27 +162,27 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
                         <div class="rating">
                                 <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                         </div>
@@ -204,27 +202,27 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
                         <div class="rating">
                                 <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-empty"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-empty"></use>
                                     </svg>
                                 </span>
                         </div>
@@ -244,27 +242,27 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
                         <div class="rating">
                                 <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-empty"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-empty"></use>
                                     </svg>
                                 </span>
                         </div>
@@ -319,27 +317,27 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
                         <div class="rating">
                                 <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-empty"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-empty"></use>
                                     </svg>
                                 </span>
                         </div>
@@ -359,27 +357,27 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
                         <div class="rating">
                                 <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-empty"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-empty"></use>
                                     </svg>
                                 </span>
                         </div>
@@ -399,27 +397,27 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
                         <div class="rating">
                                 <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                         </div>
@@ -439,27 +437,27 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
                         <div class="rating">
                                 <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-empty"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-empty"></use>
                                     </svg>
                                 </span>
                         </div>
@@ -479,27 +477,27 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
                         <div class="rating">
                                 <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-empty"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-empty"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-empty"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-empty"></use>
                                     </svg>
                                 </span>
                         </div>
@@ -519,27 +517,27 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
                         <div class="rating">
                                 <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                         </div>
@@ -559,27 +557,27 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
                         <div class="rating">
                                 <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-empty"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-empty"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-empty"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-empty"></use>
                                     </svg>
                                 </span>
                         </div>
@@ -599,27 +597,27 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
                         <div class="rating">
                                 <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-empty"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-empty"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-empty"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-empty"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-empty"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-empty"></use>
                                     </svg>
                                 </span>
                         </div>
@@ -639,27 +637,27 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
                         <div class="rating">
                                 <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-empty"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-empty"></use>
                                     </svg>
                                 </span>
                         </div>
@@ -679,27 +677,27 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
                         <div class="rating">
                                 <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                         </div>
@@ -719,27 +717,27 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
                         <div class="rating">
                                 <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-empty"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-empty"></use>
                                     </svg>
                                 </span>
                         </div>
@@ -759,27 +757,27 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
                         <div class="rating">
                                 <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                             <span>
                                     <svg>
-                                        <use xlink:href="sprite.svg#icon-star-full"></use>
+                                        <use xlink:href="../resources/images/sprite.svg#icon-star-full"></use>
                                     </svg>
                                 </span>
                         </div>
@@ -795,6 +793,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
             <div class="title">
                 <h1>Find Beers</h1>
             </div>
+
+            <!-- Filtering checkboxes -->
             <div class="row">
                 <div class="col-md-3">
 
@@ -878,6 +878,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
                         <?php } ?>
                     </div>
 
+                    <!-- Display filter results -->
                     <div class="col-md-9">
                         <br />
                         <div class="row searchResult">
@@ -940,7 +941,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
                 <div>
                         <span>
                             <svg>
-                                <use xlink:href="sprite.svg#icon-location"></use>
+                                <use xlink:href="../resources/images/sprite.svg#icon-location"></use>
                             </svg>
                         </span>
                     100 Beer Street, 12345 NJ, USA
@@ -948,7 +949,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
                 <div>
                         <span>
                             <svg>
-                                <use xlink:href="sprite.svg#icon-envelop"></use>
+                                <use xlink:href="../resources/images/sprite.svg#icon-envelop"></use>
                             </svg>
                         </span>
                     beerco@email.com
@@ -956,7 +957,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
                 <div>
                         <span>
                             <svg>
-                                <use xlink:href="sprite.svg#icon-phone"></use>
+                                <use xlink:href="../resources/images/sprite.svg#icon-phone"></use>
                             </svg>
                         </span>
                     123-456-7890
@@ -964,7 +965,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
                 <div>
                         <span>
                             <svg>
-                                <use xlink:href="sprite.svg#icon-paperplane"></use>
+                                <use xlink:href="../resources/images/sprite.svg#icon-paperplane"></use>
                             </svg>
                         </span>
                     NJ City, USA

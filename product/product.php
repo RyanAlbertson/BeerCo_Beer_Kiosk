@@ -45,11 +45,15 @@ $description = $row['Specific_Beer_Style_Description'];
 <body>
     <div class="container">
         <div class="card">
+
+            <!-- Beer image -->
             <div class="beerBackground" style="">
                 <div class="gradient second" color="purple"></div>
                 <h1 class="logoBG">Beer Co.</h1>
                 <img src="<?php echo $productImgPath; ?>" alt="" class="beer show" color="purple">
             </div>
+
+            <!-- Beer info -->
             <div class="info">
                 <div class="data">
                     <div>

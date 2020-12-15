@@ -9,8 +9,6 @@ openNav.addEventListener('click', () => {
     }
 });
 
-
-
 closeNav.addEventListener('click', () => {
    const navLeft = nav.getBoundingClientRect().left
     if(navLeft === 0){
@@ -18,7 +16,6 @@ closeNav.addEventListener('click', () => {
         document.body.classList.remove('active');
     }
 });
-
 
 //smooth scroll
 // ... rest syntax
@@ -38,6 +35,8 @@ scrollLink.forEach(link => {
         document.body.classList.remove("active");
     })
 })
+
+// How does home.php know to invoke the proceding functions? //
 
 // Displays filtered beers
 function filterSearch() {

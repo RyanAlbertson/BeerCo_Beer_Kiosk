@@ -8,9 +8,11 @@ if($conn->connect_error) {
     die("ERROR: failed to connect to MySQL: " . $conn->connect_error);
 }
 
+// home.php not sending search bar text to here? //
+
 // Search DB for matching brand names
-if (isset($_GET['term'])) {
-    $query = "SELECT * FROM product_data WHERE Brand_Name LIKE '{$_GET['term']}' LIMIT 20";
+if (isset($_GET['searchBar'])) {
+    $query = "SELECT * FROM product_data WHERE Brand_Name LIKE '{$_GET['searchBar']}' LIMIT 20";
     $result = mysqli_query($conn, $query);
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_array($result)) {

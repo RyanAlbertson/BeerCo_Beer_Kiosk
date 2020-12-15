@@ -1,6 +1,6 @@
 <?php
-// Used to get filtered product data from the beer_co database.
 class Product {
+// Gets filtered product data from the beer_co database.
 
     private $table = "product_data";
     private $dbConnect = false;
@@ -101,6 +101,8 @@ class Product {
         $sqlQuery .= " ORDER BY product_id";
         $result = mysqli_query($this->dbConnect, $sqlQuery);
         $totalResult = mysqli_num_rows($result);
+
+        // Build HTML code to send back to home.php
         $searchResultHTML = '';
         if($totalResult > 0) {
             while ($row = mysqli_fetch_array($result)) {
