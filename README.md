@@ -1,1 +1,1 @@
-# Beerco Beer Kiosk
+# BeerCo Beer Kiosk
