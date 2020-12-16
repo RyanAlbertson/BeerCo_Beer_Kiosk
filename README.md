@@ -1,5 +1,5 @@
 # BeerCo Beer Kiosk
-_Final project submission for CS 423 - Software Engineering, at Rutgers University - Camden_
+_Capstone project submission for CS 423 - Software Engineering, at Rutgers University - Camden_
 
 ### Description
 Our group was prompted with a hypothetical company and a general description of a piece of software that the business required.
