@@ -16,18 +16,19 @@ meetings with the _client_. This undertaking gave us practice with an array of c
 
 ### Screenshots
 _The website is hosted on a localserver. So here are some screenshots to provide an idea of the website structure._
+<hr>
 
 > Login Page
-> <img src="./resources/screenshots/login.png" width=1000>
+> <img src="./resources/screenshots/login.PNG" width=1000>
 
 > Home Page Header
-> <img src="./resources/screenshots/home_header.png" width=1000>
+> <img src="./resources/screenshots/home_header.PNG" width=1000>
 
 > Home Page Top Half
-> <img src="./resources/screenshots/home_body1.png" width=1000>
+> <img src="./resources/screenshots/home_body1.PNG" width=1000>
 
 > Home Page Bottom Half
-> <img src="./resources/screenshots/home_body2.png" width=1000>
+> <img src="./resources/screenshots/home_body2.PNG" width=1000>
 
 > Individual Product Page
-> <img src="./resources/screenshots/product.png" width=1000>
+> <img src="./resources/screenshots/product.PNG" width=1000>
