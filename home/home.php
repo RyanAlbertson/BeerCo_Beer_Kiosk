@@ -13,7 +13,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../resources/css/home.css">
+    <link rel="stylesheet" href="../resources/css/home.css?ver=<?php echo rand(111,999) ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
     <script src="../resources/js/home.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
@@ -281,7 +281,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] != true){
                     <h1>Miller</h1>
                     <a href="#all" class="button category__btn">View Beers</a>
                 </div>
-                <img src="../resources/images/media/miller-genuine-draft.png" alt="">
+                <img src="../resources/images/media/miller-genuine-draft.png" style="max-width:190px;">
             </div>
 
             <div class="category__right">
