@@ -15,7 +15,7 @@ meetings with the _client_. This undertaking gave us practice with an array of c
 * MySQL, phpMyAdmin
 
 ### Screenshots
-The website is hosted on a localserver. So here are some screenshots to provide an idea of the website structure.
+The website is hosted on a local server. So here are some screenshots to provide an idea of the website structure.
 <hr>
 
 > Login Page
